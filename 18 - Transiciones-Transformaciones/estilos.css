@@ -1,0 +1,57 @@
+* { 
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Arial;
+}
+
+.element {
+    margin: 60px;
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+
+    /* transform: translate(100px, 200px);
+    transform: translateX(200px);
+    transform: translateY(200px); */
+    /* transform: translateX(20px) translateY(20px); */
+
+
+
+
+    /*  transform: rotate(90deg);
+        0-360 deg
+        0-400 grad
+        0-6.28319 rad
+        0-1 turn
+    */
+
+    /* Usar width y height es mala practica en trancisiones */
+    /* width: 400px; */
+    /* Es mejor usar scale */
+    /* transform: scaleX(1.5) scaleY(2); */
+    /* transform-origin: left top; */
+
+
+
+    /* transition: .3s; */
+
+    /* Especifica la propiedad que tendra la transicion */
+    /* transition-property: background-color, transform, opacity; */
+    /* transition-duration: 1s; */
+    /* Define la curva de aceleracion de la transisión del estado inicial y final */
+    /* transition-timing-function: ease; */
+    /* Define el tiempo de espera para que una transicion se ejecute */
+    /* transition-delay: 1000ms; */
+
+    transition: background-color, transform .3s linear 1s;
+}
+
+.element:hover {
+    background-color: black;
+    opacity: .6;
+    /* transform: skewX(10deg) skewY(30deg) rotate(80deg); */
+    transform: translate(100%, 100%) scale(1.3) rotate(80deg);
+}

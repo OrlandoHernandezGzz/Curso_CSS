@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    /* Border box hace que la caja se resete y solo
+    respete el width y height lo demas ya no lo suma
+    al modelo de cajas */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Capa del contenido */
+.card {
+    background-color: royalblue;
+    color: white;
+    /* display: inline-block; */
+    /* max-width: 300px;
+    min-width: 200px; */
+    width: 300px;
+    /* height: 200px; */
+
+    /* desbordamiento */
+    /* overflow: scroll; */
+
+
+    /* PADDING */
+    /* arriba, derecha, abajo, izquierda */
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 60px;
+    padding-left: 80px;
+
+    padding: 20px 40px 60px 80px;
+    padding: 20px 40px 80px;
+    padding: 20px 40px;
+
+
+    /* BORDER */
+    border: 3px solid chocolate;
+
+    /* border-width: 20px; */
+    /* border-top-width: 20px; */
+
+    /* border-style: dashed; */
+    /* border-top-style: double; */
+
+    /* border-color: purple; */
+    /* border-top-color: purple; */
+}
+
+/* MARGIN */
+.card--one{
+    /* margin: 50px; */
+    /* margin-top: 50px;
+    margin-right: 30px;
+    margin-bottom: 70px;
+    margin-left: 10px; */
+    margin: auto;
+}
+
+
+
+
+/* 
+Colapso de margenes: Comportamiento cuando dos margenes
+se combinan y se vuelven uno solo.
+Solo pasa con los margenes verticales.
+*/
+.main {
+    background-color: steelblue;
+    color: white;
+    /* margin-bottom: 100px; */
+    border: 0.1px solid transparent;
+}
+
+.main__title {
+    margin-top: 50px;
+}
+
+.footer {
+    background-color: slateblue;
+    color: white;
+    /* margin-top: 50px; */
+}
+
+
+
+.card {
+    width: 200px;
+    height: 200px;
+    padding: 45px;
+    border: 5px solid chocolate;
+}

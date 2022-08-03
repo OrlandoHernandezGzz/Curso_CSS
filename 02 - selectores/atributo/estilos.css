@@ -1,0 +1,29 @@
+[value]{
+    display: block;
+    width: 90%;
+    margin-top: 20px;
+}
+
+/* [type="text"]{
+    background-color: yellow;
+} */
+
+/* busca esa palabra, que este separadaa de todos los demas textos */
+[value~="cursocss.com"]{
+    background-color: yellow;
+}
+
+/* Busca que la palabra este al inicio */
+[value^="cursocss.com"]{
+    background-color: yellow;
+}
+
+/* Busca que exista esa palabra al ultimo del texto */
+[value$="Aquí"]{
+    background-color: yellow;
+}
+
+/* No importa donde se encuentra esa palabra, si esta junto o no */
+[value*="cursocss.com"]{
+    background-color: yellow;
+}

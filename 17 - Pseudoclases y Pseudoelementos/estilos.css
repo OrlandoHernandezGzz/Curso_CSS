@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Arial;
+}
+
+.link {
+    margin: 50px;
+    display: inline-block;
+    background-color: slateblue;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    border-radius: 2em;
+    transition: .3s;
+}
+
+/* .link:hover {
+    background-color: tomato;
+    transform: translateY(10px);
+} */
+
+/* Indica cuando el usuario esta presionando a un elemento */
+.link:active {
+    background-color: tomato;
+    transform: translateY(10px);
+}
+
+
+/* .element1 {
+    background-color: tomato;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    transition: .3s;
+} */
+
+/* Cuando es apuntado esa clase toma los estilos. */
+/* .element1:target {
+    transform: translateX(100%);
+} */
+
+
+.check {
+    margin: 50px 20px;
+}
+
+
+/* 
+ La pseudoclase checked indica cuando un input de tipo
+ radio, check o select estan activos, indica el estado cuando estan
+ activos 
+*/
+.check:checked + .label{
+    background-color: green;
+}
+
+.label {
+    background-color: crimson;
+    color: #fff;
+    padding: 20px 15px;
+}
+
+/* Focus: cuando esta enfocado en un input. */
+.input {
+    margin: 50px;
+    padding: 10px;
+    width: 250px;
+    height: 50px;
+}
+
+.input:focus {
+    color: #fff;
+    background-color: black;
+}
+
+
+
+/*
+    PSEUDO-ELEMENTOS.
+    - Empiezan con ::
+    - Permiten crear estilos extras en css.
+    - su especifidad es de 1.
+    - Es obligatorio que siempre tengan content.
+*/
+.element1 {
+    background-color: tomato;
+    width: max-content;
+    font-size: 2rem;
+    color: #fff;
+    margin: 50px;
+    transition: .3s;
+}
+
+/* Antes de */
+.element1::before {
+    /* content: "Voy antes "; */
+
+    content: "";
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: #000;
+}
+
+/* Despues de */
+.element1::after {
+    /* content: " Voy despues"; */
+
+    content: "";
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: green;
+}
+
+
+.validacion {
+    padding: .5em 2em;
+    margin: 50px;
+    font-size: 1rem;
+}
+
+
+.validacion + .message::after {
+    content: "Felicidades, Haz ingresado un texto";
+    display: block;
+    background-color: green;
+    color: #fff;
+    padding: 1rem;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.validacion:placeholder-shown + .message::after {
+    content: "Aun no has escrito nada en el input";
+    display: block;
+    background-color: crimson;
+    color: #fff;
+    padding: 1rem;
+    width: max-content;
+    margin: 0 auto;
+}
+
+/* .validacion:placeholder-shown {
+    background-color: #000;
+    color: #fff;
+} */

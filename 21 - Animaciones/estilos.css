@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.bell {
+    background-color: #3d3dcf;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 8px;
+    display: flex;
+}
+
+.bell__item {
+    margin: auto;
+    width: 80px;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: campana infinite 1s;
+}
+
+@keyframes campana {
+    0% {
+        transform: rotate(30deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 60px;
+    background-color: tomato;
+    animation-name: cambiar-color;
+    /* animation-name: grow; */
+    animation-duration: 1s;
+    /* Espicifica la curva de aceleracion de la animacion */
+    /* ease, ease-in, ease-in-o ut, ease-out, linear */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* normal, reverse, alternate, alternate-reverse */
+    /* animation-direction: alternate; */
+
+    /* Define lo que sucede antes y despues que una animacion se ejecute */
+    /* forwards se van aplicar los estilos aunque esta termine */
+    /* backwards la animacion tendra los estilos antes de que empieze la animacion */
+    /* both es una combinacion de las dos */
+    animation-fill-mode: both;
+
+    /* Cuanto tiempo va durar la animacion en ejecutarse */
+    animation-delay: 2s;
+
+    animation: cambiar-color 2s 1s linear infinite alternate both running;
+}
+
+/* .box:hover {
+    animation-play-state: paused;
+} */
+
+/* Keyfrems */
+/* 
+    Nos ayudan a controlar el flujo de otoda la animacion en la propiedad
+    animation.
+
+    Basicamente permite controlar los pasos de una animacion,
+    tienen dos palabras claves from y to.
+*/
+/* @keyframes cambiar-color {
+    from {
+        width: 250px;
+        background-color: black;
+    }
+
+    to {
+        width: 300px;
+        background-color: purple;
+    }
+} */
+
+@keyframes cambiar-color {
+    0% {
+        /* transform: scaleY(1); */
+        transform: translate(0);
+        background-color: crimson;
+    }
+    25% {
+        /* transform: scaleY(2); */
+        transform: translate(100%);
+        background-color: salmon;
+    }
+    50% {
+        /* transform: scaleY(1.5); */
+        transform: translate(100%, 100%);
+        background-color: slateblue;
+    }
+    75% {
+        /* transform: scale(1.5); */
+        transform: translate(0, 100%);
+        background-color: teal;
+    }
+    100% {
+        /* transform: scaleY(2.3); */
+        transform: translate(0);
+        background-color: black;
+    }
+
+}
+
+@keyframes grow {
+    0% {
+        transform: scaleX(1.5);
+    }
+
+    100% {
+        transform: scaleX(2.5);
+    }
+}
+

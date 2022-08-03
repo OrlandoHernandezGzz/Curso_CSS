@@ -1,0 +1,57 @@
+/* 
+    Custom Properties o Variables en CSS.
+    Nos permiten almacenar valores permitidos en las propiedades de css.
+
+    Normalmente se declaran en la pseudoclase-root.
+    :root {
+    }
+
+    Las custom properties fueron usadas para reutilizar valores.
+
+    Se puede usar custom properties en cualquier selector de css,
+    solo que esta se limita a ese selector y a sus hijos.
+
+    Se puede sobreescribir un selector, por ejemplo:
+    declaramos una variable en root y luego esa misma variable
+    le asignamos otro valor en un contenedor, ahora ese contenedor
+    tomara ese valor junto con sus hijos.
+*/
+:root {
+    /* --bordes-titulo: linear-gradient(steelblue, hotpink);
+    --bordes: 1px solid #000; */
+    --color-primario: royalblue;
+    --padding-botones: 20px 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+}
+
+.title {
+    border: var(--bordes);
+    color: var(--color-primario);
+}
+
+.paragraph {
+    border: var(--bordes);
+    color: var(--color-primario);
+}
+
+.cta {
+    background-color: var(--color-primario);
+    /* El linear-gradient se usa con background-image */
+    background-image: var(--bordes-titulo);
+    display: block;
+    /* Si no encuentra la variable pon el valor despues de la coma */
+    padding: var(--padding-botones, 80px 0);
+    border-radius: 30px;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-decoration: none;
+}

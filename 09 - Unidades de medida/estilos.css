@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+}
+
+.container {
+    padding: 40px;
+}
+
+/* 
+    Unidades absolutas: tienen un valor definido y no depende de nada más.
+*/
+.title {
+    font-size: 5cm;
+    font-size: 50pt;
+    font-size: 50mm;
+    font-size: 40px;
+}
+
+/* 
+    Unidades de longitud relativa: Su tamaño depende de algo externo a ellas.
+    Ese valor puede cambiar dependiendo el contexto.
+
+    rem: relativa al tamño de la fuente de la raiz. 1rem = 16px.
+    em: similar a rem pero su diferencia es rem se basa en el fontsize de la raiz
+    del documento, pero em es relativo al tamaño de fuente del padre o de un ancestro
+    superior que tenga declarado un fontsize
+*/
+
+
+
+/* 
+    vw: son relativas al vw del navegador. 
+    Es el area vsible que podemos observar en el navegador. 
+*/
+.container {
+    padding: 40px;
+    width: 50vw;
+    background: yellow;
+}

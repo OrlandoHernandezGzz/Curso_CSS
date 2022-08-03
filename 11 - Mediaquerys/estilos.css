@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: tomato;
+}
+
+.img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* 
+Se recomienda poner los mediaqueries debajo de todos los estilos
+en max-width siempre poner el valor mayor arriba abajo
+en min-width es lo contrario poner el menor arriba.
+@media (max-width: 600px){
+    body {
+        background-color: #000;
+    }
+}
+
+@media (min-width: 600px){
+    body {
+        background-color: steelblue;
+    }
+} */
+
+
+@media (min-width: 800px) {
+    body {
+        background-color: crimson;
+    }
+
+    .img {
+        width: 50%;
+        border-radius: 100%;
+    }
+}

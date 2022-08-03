@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+}
+
+.container {
+    padding: 70px;
+    margin: 50px auto;
+    /* fondos */
+    width: 90%;
+    height: 500px;
+    background-color: magenta;
+    background-image: url('img/img.jpg');
+    background-repeat: no-repeat;
+    /* top right bottom left */
+    background-position: center;
+    /* background-size: 10px 300px; */
+
+    /*cover: hace que la imagen se estire al elemento pero si esta mas grande se pasa*/
+    /* contain: hace que se ajuste al elemento */
+    background-size: cover;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.685), rgba(255, 0, 0, 0.685)), url('img/img.jpg');
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+}
+
+
+
+.title {
+    font-size: 42px;
+    /* Palabras clave agregando colores */
+    color: tomato;
+    /* Con RGB 0-255*/
+    color: rgb(255, 0, 0);
+
+    /* Con hsl */
+    /* color: hsl(hue(0-360), saturation(0-100%), lightness(0-100%)); */
+    color: hsl(210, 100%, 50%);
+}
+

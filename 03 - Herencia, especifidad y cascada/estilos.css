@@ -1,0 +1,55 @@
+/* 
+    Cascada: 
+    Define que elemento predominaran en caso de ver un elemento de mas de un
+    selector.
+*/
+/* h1 {
+    color: royalblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: crimson;
+    font-family: cursive;
+} */
+
+
+
+/* La especificidad: 
+    define que estilos se aplicaran, en pocas palabras
+    es el valor que tiene cada selector, lo pondra primero.
+*/
+
+/* Especificidad de 10 */
+/* .title {
+    color: royalblue;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* Especificidad de 11 */
+/* h1.title{
+    color: crimson;
+    font-family: cursive;
+}  */
+
+
+/* 
+    Herencia de CSS:
+    Nos permite heredar ciertas propiedades de los elementos a los hijos.
+*/
+body {
+    border: 3px solid orange;
+    font-family: Arial, Helvetica, sans-serif;
+    color: steelblue;
+}
+
+/* Para hacer que hereden propiedades a la fuerza es de la sig forma */
+.title {
+    border: inherit;
+}
+
+input {
+    font-size: 25px;
+    color: inherit;
+    font-family: inherit;
+}

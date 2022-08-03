@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin: 40px auto;
+    border: 4px solid black;
+}
+
+.element {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.static {
+    background-color: tomato;
+    /* Valor que todos los elementos tienen por defecto */
+    position: static;
+
+}
+
+.relative {
+    background-color: steelblue;
+    /* 
+        Por defecto se posiciona como cualquier elemento 
+
+    */
+    /* border: 4px solid crimson; */
+    /* Se mueve en base a su posicionamiento original */
+    position: relative;
+    /* top: 150px; */
+    /* right: -30px; */
+    /* bottom: -100px; */
+    /* left: -30px; */
+}
+
+.absolute {
+    background-color: teal;
+    /* 
+        Cuando es absolute ese elemento es removido del flujo y ya no
+        tiene un espacio reservado.
+        Se mueve en base de su ancestro o contenedor más cercano que 
+        tenga una position diferente que static.
+    */
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* right: 0; */
+    /* margin: 0; */
+}
+
+body {
+    height: 500vh;
+}
+
+.fixed {
+    background-color: crimson;
+    /* 
+        Fixed se queda pegado a la pantalla y se posiciona en 
+        base al viewport 
+    */
+    position: fixed;
+    top: 0;
+}
